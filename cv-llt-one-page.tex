@@ -1,0 +1,123 @@
+%%%%%%%%%%%%%%%
+% This CV example/template is based on my own
+% CV which I (lamely attempted) to clean up, so that
+% it's less of an eyesore and easier for others to use.
+%
+% LianTze Lim (khatiri.med@gmail.com)
+% 12 Decembre, 2016
+%
+\documentclass[a4paper,skipsamekey,10pt,british]{curve}
+
+% Uncomment to enable Chinese
+% \usepackage{ctex}
+
+\usepackage{settings}
+\usepackage{todonotes}
+\usepackage{multicol}
+% Change the fonts if you want
+\ifxetexorluatex % If you're using XeLaTeX or LuaLaTeX
+  \usepackage{fontspec}
+  \setmainfont[Ligatures=TeX,SmallCapsFeatures={Letters=SmallCaps,LetterSpace=3}]{EB Garamond}
+  \setsansfont{Lato}
+\else % If you're using pdfLaTeX or latex
+	\usepackage{mathptmx}
+	\usepackage[utf8]{inputenc}
+	\usepackage[T1]{fontenc}
+	\usepackage[tracking=smallcaps]{microtype}
+	%\usepackage{fbb}
+	\usepackage[type1]{cabin}
+	\usepackage[varqu,varl]{zi4}
+	\usepackage{times} 
+	%\useosf  %% Comment out if you prefer lining figures rather than old style figures
+\fi
+
+%% Only needed if you want a Publication List
+\addbibresource{own-bib.bib}
+% Change the page margins if you want
+% \geometry{left=1cm,right=1cm,top=1.5cm,bottom=1.5cm}
+
+% Change the colours if you want
+ \definecolor{SwishLineColour}{HTML}{585858}
+ \definecolor{MarkerColour}{HTML}{08298A}
+% Change the item prefix marker if you want
+%\prefixmarker{$\emptyset$}
+%\prefixmarker{}
+
+%% Photo is only shown if "fullonly" is included
+\includecomment{fullonly}
+% \excludecomment{fullonly}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\title{Curriculum Vitae KHATIRI}
+\begin{comment}
+\leftheader{%
+	{\LARGE\bfseries\sffamily Mohammed KHATIRI}
+
+	\makefield{\faMinus}{{N\'e le 29 Octobre 1989, Marocain}}
+
+%	\makefield{\faHome}{{39 avenue ambroise croizat,}}	
+
+    \makefield{}{{38400, Saint Martin D'héres}}
+   
+
+	\makefield{\faEnvelope}{\href{mailto:khatiri.med@gmail.com}{{khatiri.med@gmail.com}}}
+	
+	\makefield{\faMobile }{{+33 7 67 36 04 11}}
+
+ % link to symboles : http://tug.ctan.org/info/symbols/comprehensive/symbols-a4.pdf
+}
+\end{comment}
+\leftheader{}
+\rightheader{~}
+\begin{fullonly}
+\photo[r]{photo1}
+\photoscale{0.13}
+\end{fullonly}
+\begin{document}
+\makeheaders[c]
+
+\begin{center}
+  {\LARGE\bfseries\sffamily Khatiri Mohammed}\\
+  {\LARGE\bfseries\sffamily Doctorant en informatique}\\
+  {\sffamily High-performance computing}
+\end{center}
+
+\begin{minipage}[c]{0.19\linewidth}
+
+\makefield{\faMinus}{{N\'e le 29 Octobre 1989, Marocain}}
+
+%	\makefield{\faHome}{{39 avenue ambroise croizat,}}	
+\makefield{}{{38400, Saint Martin D'héres}}
+
+\makefield{\faEnvelope}{\href{mailto:khatiri.med@gmail.com}{{khatiri.med@gmail.com}}}
+
+\makefield{\faMobile }{{+33 7 67 36 04 11}}
+
+\end{minipage} \hfill
+\begin{minipage}[c]{0.8\linewidth}
+\makerubric{professionnelle}
+\makerubric{formations}
+\makerubric{competenceInfo}
+\end{minipage}
+
+
+
+
+
+
+\makerubric{certificationFormation}
+\makerubric{activiteScientifique}
+
+\input{publications}
+%\makerubric{activiteEnseignement}
+%\makerubric{stageRecherche}
+%\makerubric{experienceProfessionnelle}
+% If you're not a researcher nor an academic, you probably don't have any publications; delete this line.
+%% Sometimes when a section can't be nicely modelled with the \entry[]... mechanism; hack our own and use \input NOT \makerubric
+%\makerubric{projectAcademique}
+%\makerubric{competenceInfo}
+\makerubric{langue}
+\makerubric{centreInteret}
+%\input{referee-full}
+
+\end{document}
